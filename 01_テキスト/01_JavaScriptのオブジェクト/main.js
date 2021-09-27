@@ -12,5 +12,12 @@ const hikakin = {
   }
 }
 
+const numbersToStoring = {
+  0: "ぜろ",
+  1: "いち",
+  2: "に"
+}
+
 // 練習問題
 // hikakin オブジェクトに入っている sayHello メソッドを実行してください。
+hikakin.sayHello()
