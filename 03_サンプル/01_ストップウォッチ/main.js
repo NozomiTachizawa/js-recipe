@@ -4,7 +4,10 @@ const button = document.getElementById("button")
 let count = 0
 
 const countUp = function() {
+  // countを更新
   count += 1
+  console.log(count) //追加
+  // countを秒単位にして表示
   display.textContent = count / 100
 }
 
