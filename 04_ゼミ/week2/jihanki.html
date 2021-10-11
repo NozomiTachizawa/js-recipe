@@ -17,10 +17,14 @@
       <div id="display-saifu">1000</div>
       <h4>↓投入金額↓</h4>
       <div id="display-jihanki-money">0</div>
+      <button id="otsuri">
+        お釣り
+      </button>
     </section>
     <section>
       <h3>商品を買う</h3>
       <button id="buy-button-tea">お茶(100円)</button>
+      <button id="buy-button-osake">お酒(150円)</button>
     </section>
     <section>
       <h3>買った商品</h3>
@@ -28,36 +32,57 @@
     </section>
     <script>
       // HTML要素を取得する
-      const buyButtonTea = document.getElementById("buy-button-tea");
-      const displayItems = document.getElementById("display-items");
-      const addButton100 = document.getElementById("add-button-100");
-      const displaySaifu = document.getElementById("display-saifu");
+      const buyButtonTea = document.getElementById("buy-button-tea")
+      const buyButtonOsake = document.getElementById("buy-button-osake")
+      const displayItems = document.getElementById("display-items")
+      const addButton100 = document.getElementById("add-button-100")
+      const displaySaifu = document.getElementById("display-saifu")
       const displayJihankiMoney = document.getElementById(
-        "display-jihanki-money"
-      );
+        "display-jihanki-money",
+      )
+      const otsuri = document.getElementById("otsuri")
 
-      let saifu = 1000;
-      let jihankiMoney = 0;
+      let saifu = 1000
+      let jihankiMoney = 0
 
       // buyButtonTea を押した時の処理
-
-      buyButtonTea.onclick = function () {
+      buyButtonTea.onclick = function() {
         if (jihankiMoney >= 100) {
-          displayItems.textContent += "🍵";
-          jihankiMoney -= 100;
-          displayJihankiMoney.textContent = jihankiMoney;
+          displayItems.textContent += "🍵"
+          jihankiMoney -= 100
+          displayJihankiMoney.textContent = jihankiMoney
         }
-      };
+      }
+
+      //buyButtonOsake を押したときの処理
+      buyButtonOsake.onclick = function() {
+        if (jihankiMoney >= 150) {
+          displayItems.textContent += "🍺"
+          jihankiMoney -= 150
+          displayJihankiMoney.textContent = jihankiMoney
+        }
+      }
 
       // addButton100 を押したときの処理
-      addButton100.onclick = function () {
+      addButton100.onclick = function() {
         if (saifu >= 100) {
-          saifu -= 100;
-          jihankiMoney += 100;
-          displaySaifu.textContent = saifu;
-          displayJihankiMoney.textContent = jihankiMoney;
+          saifu -= 100
+          jihankiMoney += 100
+          displaySaifu.textContent = saifu
+          displayJihankiMoney.textContent = jihankiMoney
+        else {
+            
         }
-      };
+        }
+      }
+
+      // otsuri を押したときの処理
+      otsuri.onclick = function() {
+        saifu += jihankiMoney
+        jihankiMoney = 0
+        displaySaifu.textContent = saifu
+        displayJihankiMoney.textContent = jihankiMoney
+      }
     </script>
   </body>
 </html>
