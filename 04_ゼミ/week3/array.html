@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const aisatsu = ["おはよう", "こんにちは", "こんばんは"]
+        console.log(aisatsu);
+        // 配列名[添字番号]で要素を取得
+        console.log(aisatsu[0])
+        // i番目までコンソールに表示
+        for (let i = 0; i < aisatsu.length; i++) {
+            console.log(aisatsu[i])
+        }
+        // プロトタイプメソッド 配列とかオブジェクトとか文字列があらかじめ持ってる
+        // pushメソッド 配列の一番後ろに新たに追加
+        aisatsu.push("おやすみ")
+        console.log(aisatsu)
+
+        const memos = [
+            {
+                text: "おはよう",
+                createAt: new Date(),
+            },
+            {
+                text: "こんにちは",
+                createAt: new Date(),
+            },
+            {
+                text: "こんばんは",
+                createAt: new Date(),
+            },
+            {
+                text: "おやすみ",
+                createAt: new Date(),
+            }
+        ]
+        console.log(memos[0].text)
+    </script>
+</body>
+</html>

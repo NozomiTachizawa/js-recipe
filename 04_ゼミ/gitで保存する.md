@@ -1,5 +1,4 @@
 # git で保存して GitHub にアップロードする方法
-# nozomi
 
 ```bash
 git add .
