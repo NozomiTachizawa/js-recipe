@@ -43,3 +43,18 @@ new Vue({
     }
   }
 })
+
+/**
+ * 簡単な例
+ */
+new Vue({
+  el: '#app2',
+  data: {
+    message: "ハロー"
+  },
+  methods: {
+    changeMessage: function() {
+      this.message = "ナマステ"
+    }
+  }
+})

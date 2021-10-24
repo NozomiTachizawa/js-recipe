@@ -16,13 +16,13 @@
   </section>
 
   <section id="v-if-sign-in">
-    <h3>v-if でサインイン</h3>
+    <h3>v-ifでサインイン</h3>
     <!-- この要素は user が null でないときに表示される -->
     <div v-if="user !== null">
       <button v-on:click="signOut">サインアウト</button>
       <div>
         {{ user.name }}さん、こんにちは！
-      </div>
+      </div>  
     </div>
     <!-- この要素はそれ以外の場合に表示される -->
     <div v-else>
@@ -63,14 +63,14 @@
       <span>
         {{ item.price }} 円の {{ item.name }} が {{ item.amount }} 個あります。
       </span>
-      <button v-on:click="addItem(item)">＋１個</button>
+      <button v-on:click="addItem(item)">+1個</button>
     </div>
     <div>全部で{{ totalPrice }}円です。</div>
   </section>
 
   <section id="v-model">
     <h3>v-model</h3>
-    <input type="text" v-model="inputValue" />
+    <input type="text" v-model="inputValue">
     <div>{{ inputValue }}</div>
   </section>
 
