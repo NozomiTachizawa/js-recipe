@@ -21,7 +21,7 @@ new Vue({
         sagaku: function () {
             let price = 0
             price = Number(this.nyuryokugaku) - Number(this.zandaka) - 1
-            return (price);
+            return price
         },
     },
 })
